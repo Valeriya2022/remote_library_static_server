@@ -3,9 +3,9 @@ const cors = require('cors')
 const app = express();
 const PORT = 4000;
 
-app.use('/books', cors(), express.static('books'));
-app.use('/gov_resources', cors(), express.static('governmental_resources'));
-app.use('/videos', cors(), express.static('videos'));
+app.use('/books', cors(), express.static('/media/remote-library/T7/remote_lib/books'));
+app.use('/governmental_resources', cors(), express.static('/media/remote-library/T7/remote_lib/governmetal_resources'));
+app.use('/videos', cors(), express.static('/media/remote-library/T7/remote_lib/videos'));
 
 app.get('/', cors(), (req, res) => {
     res.send('Error! This page is not available! Эта страница не доступна! ');
